@@ -5,11 +5,14 @@
 
 class ProductCatalog {
     constructor() {
+
+        const container = document.getElementById('products-grid');
+        
         // Configuration
         this.config = {
             googleSheetUrl: '',
             whatsappNumber: '9471',
-            productsPerPage: 12,
+            productsPerPage: parseInt(container?.dataset.productsPerPage),
             debounceDelay: 300
         };
 
